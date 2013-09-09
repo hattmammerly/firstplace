@@ -50,27 +50,6 @@ function rref($matrix)
     return $matrix;
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-function scrap($iter)
-{
-    foreach($iter as $key=>$val)
-    {
-        echo "$key, $val<br />";
-    }
-    foreach($iter as $key=>$val)
-    {
-        echo "::$key<br />";
-        $s = $val["score"];
-        $x = count($val["playedWith"]);
-        echo "::::score, $s. playedWith $x<br />";
-
-        foreach($val["playedWith"] as $k=>$v)
-        {
-            echo "::::$k, $v <br />";
-        }
-    }
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function read($event)
 {
     $html = file_get_contents("http://www2.usfirst.org/2013comp/events/$event/matchresults.html");
